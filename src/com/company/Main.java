@@ -1,23 +1,22 @@
 package com.company;
 
+
 import java.io.IOException;
 import java.net.DatagramPacket;
 import java.net.DatagramSocket;
-import java.net.InetAddress;
 import java.net.SocketException;
 import java.sql.*;
-import java.text.DateFormat;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.time.LocalDate;
-import java.util.Arrays;
-import java.util.Date;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+
+
+
 
 public class Main {
 
     public static void main(String[] args) throws SocketException {
+
+        Config C = new Config();
 
 
         final int PUERTO = 8050;
@@ -30,6 +29,12 @@ public class Main {
 
 
         try {
+
+            String Host = C.Host();
+            String Usuario = C.Usuario();
+            String Clave = C.Clave();
+
+
 
 
             System.out.println("Server has been started");
@@ -56,7 +61,7 @@ public class Main {
 
 
                     Class.forName("com.mysql.cj.jdbc.Driver");
-                    con = DriverManager.getConnection("jdbc:mysql://taxi.cvejcfpsnjtv.us-west-2.rds.amazonaws.com:3306/taxi", "admin", "Personaje_26");
+                    con = DriverManager.getConnection(Host, Usuario, Clave);
                     st = con.createStatement();
 
 
