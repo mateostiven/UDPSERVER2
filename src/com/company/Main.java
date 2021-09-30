@@ -20,7 +20,7 @@ public class Main {
 
 
         final int PUERTO = 8050;
-        byte[] buffer = new byte[38];
+        byte[] buffer = new byte[2000];
 
         Connection con;
         Statement st;
