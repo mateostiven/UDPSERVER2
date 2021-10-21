@@ -66,7 +66,7 @@ public class Main {
 
 
 
-                    String query = "INSERT INTO datos (Fecha, Latitud, Longitud)VALUES("+split[0]+","+split[2]+","+split[1]+")";
+                    String query = "INSERT INTO datos (Fecha, Latitud, Longitud,Taxi)VALUES("+split[0]+","+split[2]+","+split[1]+","+split[3]+")";
                     st.executeUpdate(query);
 
 
