@@ -50,7 +50,7 @@ public class Main {
                 UDPSocket.receive(request);
 
                 String message = new String(request.getData());
-                System.out.println(message);
+                //System.out.println(message);
 
                 String[] split = message.split(",");
 
